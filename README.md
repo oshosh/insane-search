@@ -25,13 +25,33 @@ A resilient public-page reader for Claude Code. No API keys, no proxy setup.
 
 ## ⚡ Install
 
+### Claude Code
 ```bash
 /plugin marketplace add https://github.com/fivetaku/gptaku_plugins.git
 /plugin install insane-search@gptaku-plugins
 /reload-plugins
 ```
 
-No commands to learn. Ask Claude Code normally — insane-search kicks in when a fetch gets blocked.
+### Google Antigravity (agy)
+You can install `insane-search` as a native plugin and skill for the `agy` CLI.
+
+#### Option A: One-click Installer (Recommended — registers and displays skill in `/skills` menu)
+Clone the repository and run the setup installer:
+* **Windows (PowerShell/CMD):**
+  ```powershell
+  .\setup\install.bat
+  ```
+* **macOS/Linux (Terminal):**
+  ```bash
+  chmod +x ./setup/install.sh && ./setup/install.sh
+  ```
+
+#### Option B: Raw CLI Install (Runs instantly but won't show in TUI `/skills` visual list)
+```bash
+agy plugin install https://github.com/oshosh/insane-search
+```
+
+No commands to learn. Ask the agent normally — `insane-search` kicks in when a fetch gets blocked.
 
 ## 💬 Try it
 

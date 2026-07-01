@@ -25,13 +25,33 @@
 
 ## ⚡ 설치
 
+### Claude Code
 ```bash
 /plugin marketplace add https://github.com/fivetaku/gptaku_plugins.git
 /plugin install insane-search@gptaku-plugins
 /reload-plugins
 ```
 
-외울 명령어는 없다. 평소처럼 Claude Code에게 말하면, fetch가 막히는 순간 insane-search가 알아서 끼어든다.
+### Google Antigravity (agy)
+Google Antigravity의 `agy` CLI 환경에서도 `insane-search`를 네이티브 플러그인 및 스킬로 활용할 수 있습니다.
+
+#### 옵션 A: 원클릭 설치 스크립트 실행 (추천 — 채팅창 `/skills` 목록에 스킬 노출 연동)
+레포지토리를 클론(다운로드) 받은 뒤, 아래 설치 파일을 실행합니다.
+* **Windows (PowerShell/CMD):**
+  ```powershell
+  .\setup\install.bat
+  ```
+* **macOS/Linux (터미널):**
+  ```bash
+  chmod +x ./setup/install.sh && ./setup/install.sh
+  ```
+
+#### 옵션 B: CLI 명령어로 직접 설치 (즉시 작동하나 TUI `/skills` 시각적 목록에는 누락됨)
+```bash
+agy plugin install https://github.com/oshosh/insane-search
+```
+
+외울 명령어는 없다. 평소처럼 에이전트에게 말하면, 웹 문서 가져오기가 차단되는 순간 `insane-search`가 알아서 동작합니다.
 
 ## 💬 이렇게 써보세요
 
