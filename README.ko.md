@@ -6,13 +6,12 @@
 
 **포기는 배추 셀 때나 쓰는 말. 공개된 페이지라면, insane-search는 결국 뚫어낸다.**
 
-차단에 강한 공개 페이지 리더 — Claude Code용. API 키도, 프록시 설정도 없다.
+차단에 강한 공개 페이지 리더 — Claude Code 및 Google Antigravity (`agy`) 지원. API 키도, 프록시 설정도 없다.
 
 <p>
-  <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/platform-Claude_Code-D97757?logo=claude" alt="Claude Code"></a>
+  <img src="https://img.shields.io/badge/platform-Claude_Code_&_Antigravity-D97757?logo=google" alt="Platforms">
   <img src="https://img.shields.io/badge/API_key-not_required-3FB950" alt="No API key">
   <a href="https://github.com/fivetaku/gptaku_plugins"><img src="https://img.shields.io/badge/part_of-gptaku--plugins-6E56CF" alt="part of gptaku-plugins"></a>
-  <a href="https://github.com/fivetaku/insane-search/stargazers"><img src="https://img.shields.io/github/stars/fivetaku/insane-search?style=flat&color=F0B72F" alt="stars"></a>
 </p>
 
 <!-- Hero — cinematic key-art: a blocked site (403 / CAPTCHA / WAF) shatters as
@@ -33,23 +32,15 @@
 ```
 
 ### Google Antigravity (agy)
-Google Antigravity의 `agy` CLI 환경에서도 `insane-search`를 네이티브 플러그인 및 스킬로 활용할 수 있습니다.
-
-#### 옵션 A: 원클릭 설치 스크립트 실행 (추천 — 채팅창 `/skills` 목록에 스킬 노출 연동)
-레포지토리를 클론(다운로드) 받은 뒤, 아래 설치 파일을 실행합니다.
-* **Windows (PowerShell/CMD):**
+저장소 내부의 설치 스크립트를 실행합니다:
+* **Windows:**
   ```powershell
   .\setup\install.bat
   ```
-* **macOS/Linux (터미널):**
+* **macOS / Linux:**
   ```bash
   chmod +x ./setup/install.sh && ./setup/install.sh
   ```
-
-#### 옵션 B: CLI 명령어로 직접 설치 (즉시 작동하나 TUI `/skills` 시각적 목록에는 누락됨)
-```bash
-agy plugin install https://github.com/oshosh/insane-search
-```
 
 외울 명령어는 없다. 평소처럼 에이전트에게 말하면, 웹 문서 가져오기가 차단되는 순간 `insane-search`가 알아서 동작합니다.
 

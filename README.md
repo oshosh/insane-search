@@ -6,13 +6,12 @@ English | [한국어](README.ko.md) | [中文](README.zh.md) | [日本語](READM
 
 **Impossible is nothing. If it's public, insane-search gets in.**
 
-A resilient public-page reader for Claude Code. No API keys, no proxy setup.
+A resilient public-page reader for Claude Code and Google Antigravity (`agy`). No API keys, no proxy setup.
 
 <p>
-  <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/platform-Claude_Code-D97757?logo=claude" alt="Claude Code"></a>
+  <img src="https://img.shields.io/badge/platform-Claude_Code_&_Antigravity-D97757?logo=google" alt="Platforms">
   <img src="https://img.shields.io/badge/API_key-not_required-3FB950" alt="No API key">
   <a href="https://github.com/fivetaku/gptaku_plugins"><img src="https://img.shields.io/badge/part_of-gptaku--plugins-6E56CF" alt="part of gptaku-plugins"></a>
-  <a href="https://github.com/fivetaku/insane-search/stargazers"><img src="https://img.shields.io/github/stars/fivetaku/insane-search?style=flat&color=F0B72F" alt="stars"></a>
 </p>
 
 <!-- Hero — cinematic key-art: a blocked site (403 / CAPTCHA / WAF) shatters as
@@ -33,23 +32,15 @@ A resilient public-page reader for Claude Code. No API keys, no proxy setup.
 ```
 
 ### Google Antigravity (agy)
-You can install `insane-search` as a native plugin and skill for the `agy` CLI.
-
-#### Option A: One-click Installer (Recommended — registers and displays skill in `/skills` menu)
-Clone the repository and run the setup installer:
-* **Windows (PowerShell/CMD):**
+Run the installer script in the repository:
+* **Windows:**
   ```powershell
   .\setup\install.bat
   ```
-* **macOS/Linux (Terminal):**
+* **macOS / Linux:**
   ```bash
   chmod +x ./setup/install.sh && ./setup/install.sh
   ```
-
-#### Option B: Raw CLI Install (Runs instantly but won't show in TUI `/skills` visual list)
-```bash
-agy plugin install https://github.com/oshosh/insane-search
-```
 
 No commands to learn. Ask the agent normally — `insane-search` kicks in when a fetch gets blocked.
 
