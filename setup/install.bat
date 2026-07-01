@@ -1,7 +1,7 @@
 @echo off
 :: Windows Installer for insane-search plugin & skill
 echo [1/2] Installing plugin via Antigravity CLI...
-agy.exe plugin install "%~dp0"
+agy.exe plugin install "%~dp0.."
 
 if %ERRORLEVEL% NEQ 0 (
     echo [ERROR] Antigravity CLI plugin installation failed.
@@ -23,11 +23,17 @@ if exist "%TARGET_DIR%" (
 )
 
 :: Create directory link to the deployed plugin skills folder
-mklink /d "%TARGET_DIR%" "%USERPROFILE%\.gemini\config\plugins\insane-search\skills\insane-search"
+cmd /c mklink /d "%TARGET_DIR%" "%USERPROFILE%\.gemini\config\plugins\insane-search\skills\insane-search" >nul 2>nul
 
-if %ERRORLEVEL% NEQ 0 (
-    echo [WARNING] Could not create symbolic link (requires admin privileges). Copying files instead...
-    xcopy /e /i /y "%~dp0skills\insane-search" "%TARGET_DIR%"
-)
+for %%i in ("%~dp0..") do set "PLUGIN_ROOT=%%~fi"
 
+echo [DEBUG] PLUGIN_ROOT: "%PLUGIN_ROOT%"
+echo [DEBUG] TARGET_DIR: "%TARGET_DIR%"
+
+if exist "%TARGET_DIR%" goto :DONE
+
+echo [WARNING] Could not create symbolic link (requires admin privileges). Copying files instead...
+xcopy /e /i /y "%PLUGIN_ROOT%\skills\insane-search" "%TARGET_DIR%"
+
+:DONE
 echo [SUCCESS] insane-search installed and registered! Please restart your agy session.
