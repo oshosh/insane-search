@@ -6,7 +6,7 @@ English | [한국어](README.ko.md) | [中文](README.zh.md) | [日本語](READM
 
 **Impossible is nothing. If it's public, insane-search gets in.**
 
-A resilient public-page reader for Claude Code and Google Antigravity (`agy`). No API keys, no proxy setup.
+A resilient public-page reader for ~~Claude Code~~ Claude Code and Google Antigravity (`agy`). No API keys, no proxy setup.
 
 <p>
   <img src="https://img.shields.io/badge/platform-Claude_Code_&_Antigravity-D97757?logo=google" alt="Platforms">
@@ -32,15 +32,9 @@ A resilient public-page reader for Claude Code and Google Antigravity (`agy`). N
 ```
 
 ### Google Antigravity (agy)
-Run the installer script in the repository:
-* **Windows:**
-  ```powershell
-  .\setup\install.bat
-  ```
-* **macOS / Linux:**
-  ```bash
-  chmod +x ./setup/install.sh && ./setup/install.sh
-  ```
+```bash
+agy plugin install https://github.com/oshosh/insane-search
+```
 
 No commands to learn. Ask the agent normally — `insane-search` kicks in when a fetch gets blocked.
 

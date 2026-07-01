@@ -6,7 +6,7 @@
 
 **포기는 배추 셀 때나 쓰는 말. 공개된 페이지라면, insane-search는 결국 뚫어낸다.**
 
-차단에 강한 공개 페이지 리더 — Claude Code 및 Google Antigravity (`agy`) 지원. API 키도, 프록시 설정도 없다.
+차단에 강한 공개 페이지 리더 — ~~Claude Code용~~ Claude Code 및 Google Antigravity (`agy`) 지원. API 키도, 프록시 설정도 없다.
 
 <p>
   <img src="https://img.shields.io/badge/platform-Claude_Code_&_Antigravity-D97757?logo=google" alt="Platforms">
@@ -32,15 +32,9 @@
 ```
 
 ### Google Antigravity (agy)
-저장소 내부의 설치 스크립트를 실행합니다:
-* **Windows:**
-  ```powershell
-  .\setup\install.bat
-  ```
-* **macOS / Linux:**
-  ```bash
-  chmod +x ./setup/install.sh && ./setup/install.sh
-  ```
+```bash
+agy plugin install https://github.com/oshosh/insane-search
+```
 
 외울 명령어는 없다. 평소처럼 에이전트에게 말하면, 웹 문서 가져오기가 차단되는 순간 `insane-search`가 알아서 동작합니다.
 
